@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bus Driver Scenarios Checklist</title>
+    <title>Checklist de Escenarios para Conductores de Bus</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -95,18 +95,185 @@
         #word-list {
             font-size: 14px;
         }
+
+        /* Estilos para el Ahorcado */
+        #hangman-container {
+            width: 200px;
+            height: 250px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        /* Estilos básicos para las partes del ahorcado */
+        .hangman-part {
+            display: none;
+            stroke: #000;
+            stroke-width: 2;
+        }
+
+        /* Base del ahorcado */
+        .base {
+            display: block;
+            stroke: #000;
+            stroke-width: 4;
+        }
+
+        /* Poste vertical */
+        .post-vertical {
+            display: block;
+            stroke: #000;
+            stroke-width: 4;
+        }
+
+        /* Poste horizontal */
+        .post-horizontal {
+            display: block;
+            stroke: #000;
+            stroke-width: 4;
+        }
+
+        /* Cuerda */
+        .rope {
+            display: block;
+            stroke: #000;
+            stroke-width: 2;
+        }
+
+        /* Cabeza */
+        .head {
+            display: block;
+            fill: none;
+            stroke: #000;
+            stroke-width: 2;
+        }
+
+        /* Cuerpo */
+        .body {
+            display: block;
+            stroke: #000;
+            stroke-width: 2;
+        }
+
+        /* Brazos */
+        .left-arm, .right-arm {
+            display: block;
+            stroke: #000;
+            stroke-width: 2;
+        }
+
+        /* Piernas */
+        .left-leg, .right-leg {
+            display: block;
+            stroke: #000;
+            stroke-width: 2;
+        }
+
+        /* Detalles adicionales */
+        .left-eye, .right-eye, .mouth {
+            display: block;
+            stroke: #000;
+            stroke-width: 1;
+        }
+
+        /* Estilos para el Mensaje Final */
+        #final-message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff8dc;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 1000;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        #final-message h2 {
+            margin-top: 0;
+        }
+
+        /* Estilos para los Botones */
+        .button-group {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .button-group button {
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .button-group button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            #hangman-container {
+                width: 150px;
+                height: 200px;
+            }
+
+            .button-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .button-group button {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
 
-<h1>Bus Driver Scenarios Checklist</h1>
+<h1>Checklist de Escenarios para Conductores de Bus</h1>
+
+<!-- Ahorcado SVG -->
+<div id="hangman-container">
+    <svg height="250" width="200">
+        <!-- Base -->
+        <line x1="20" y1="230" x2="180" y2="230" class="hangman-part base"></line>
+        <!-- Poste Vertical -->
+        <line x1="50" y1="230" x2="50" y2="20" class="hangman-part post-vertical"></line>
+        <!-- Poste Horizontal -->
+        <line x1="50" y1="20" x2="150" y2="20" class="hangman-part post-horizontal"></line>
+        <!-- Cuerda -->
+        <line x1="150" y1="20" x2="150" y2="50" class="hangman-part rope"></line>
+        <!-- Cabeza -->
+        <circle cx="150" cy="70" r="20" class="hangman-part head"></circle>
+        <!-- Cuerpo -->
+        <line x1="150" y1="90" x2="150" y2="150" class="hangman-part body"></line>
+        <!-- Brazos -->
+        <line x1="150" y1="110" x2="120" y2="130" class="hangman-part left-arm"></line>
+        <line x1="150" y1="110" x2="180" y2="130" class="hangman-part right-arm"></line>
+        <!-- Piernas -->
+        <line x1="150" y1="150" x2="130" y2="180" class="hangman-part left-leg"></line>
+        <line x1="150" y1="150" x2="170" y2="180" class="hangman-part right-leg"></line>
+        <!-- Ojos y Boca (Detalles) -->
+        <circle cx="140" cy="65" r="2" class="hangman-part left-eye"></circle>
+        <circle cx="160" cy="65" r="2" class="hangman-part right-eye"></circle>
+        <line x1="140" y1="75" x2="160" y2="75" class="hangman-part mouth"></line>
+    </svg>
+</div>
 
 <ul>
     <!-- Scenario 1 -->
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>1. Scenario: Turning Off Hazard Lights</h2>
+            <h2>1. Escenario: Apagar las Luces de Advertencia</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">After</span> 
                 <span class="word" onclick="toggleWord(this)">safely</span> 
@@ -129,7 +296,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>2. Scenario: Approaching the Railroad Crossing</h2>
+            <h2>2. Escenario: Acercándose al Cruce Ferroviario</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">When</span> 
                 <span class="word" onclick="toggleWord(this)">I</span> 
@@ -155,7 +322,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>3. Scenario: Scanning for Traffic Behind the Bus</h2>
+            <h2>3. Escenario: Escaneando el Tráfico Detrás del Bus</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">As</span> 
                 <span class="word" onclick="toggleWord(this)">I</span> 
@@ -185,7 +352,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>4. Scenario: Stopping at the Railroad Crossing</h2>
+            <h2>4. Escenario: Deteniéndose en el Cruce Ferroviario</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">When</span> 
                 <span class="word" onclick="toggleWord(this)">I</span> 
@@ -219,7 +386,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>5. Scenario: Turning Off Equipment and Listening for a Train</h2>
+            <h2>5. Escenario: Apagando el Equipo y Escuchando un Tren</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">At</span> 
                 <span class="word" onclick="toggleWord(this)">the</span> 
@@ -250,7 +417,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>6. Scenario: Opening the Service Door and Driver’s Window</h2>
+            <h2>6. Escenario: Abriendo la Puerta de Servicio y la Ventana del Conductor</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">I</span> 
                 <span class="word" onclick="toggleWord(this)">open</span> 
@@ -278,7 +445,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>7. Scenario: Safely Checking the Track and Proceeding</h2>
+            <h2>7. Escenario: Verificando la Vía y Procediendo de Manera Segura</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">After</span> 
                 <span class="word" onclick="toggleWord(this)">safely</span> 
@@ -315,7 +482,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>8. Scenario: Crossing the Tracks</h2>
+            <h2>8. Escenario: Cruzando las Vías</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">I</span> 
                 <span class="word" onclick="toggleWord(this)">cross</span> 
@@ -341,7 +508,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>9. Scenario: Approaching the Loading Zone</h2>
+            <h2>9. Escenario: Acercándose a la Zona de Carga</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">I</span> 
                 <span class="word" onclick="toggleWord(this)">slowly</span> 
@@ -375,7 +542,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>10. Scenario: Turning on the Amber Lights</h2>
+            <h2>10. Escenario: Encendiendo las Luces Ámbar</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">Approximately</span> 
                 <span class="word" onclick="toggleWord(this)">200</span> 
@@ -400,14 +567,14 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>11. Scenario: Stopping the Bus at Loading Zone</h2>
+            <h2>11. Escenario: Deteniendo el Bus en la Zona de Carga</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">I</span> 
                 <span class="word" onclick="toggleWord(this)">stop</span> 
                 the 
                 <span class="word" onclick="toggleWord(this)">bus</span> 
                 <span class="word" onclick="toggleWord(this)">12</span> 
-                <span class="word" onclick="toggleWord(this)">feet</span> 
+                feet 
                 <span class="word" onclick="toggleWord(this)">from</span> 
                 the 
                 <span class="word" onclick="toggleWord(this)">students</span>.
@@ -420,11 +587,11 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>12. Scenario: Securing the Bus Before Loading</h2>
+            <h2>12. Escenario: Asegurando el Bus Antes de Cargar</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">I</span> 
                 <span class="word" onclick="toggleWord(this)">place</span> 
-                <span class="word" onclick="toggleWord(this)">the</span> 
+                the 
                 <span class="word" onclick="toggleWord(this)">transmission</span> 
                 in 
                 <span class="word" onclick="toggleWord(this)">neutral</span> 
@@ -448,13 +615,13 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>13. Scenario: Opening the Door for Loading</h2>
+            <h2>13. Escenario: Abriendo la Puerta para Cargar</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">I</span> 
                 <span class="word" onclick="toggleWord(this)">open</span> 
                 the 
                 <span class="word" onclick="toggleWord(this)">door</span> 
-                <span class="word" onclick="toggleWord(this)">for</span> 
+                for 
                 <span class="word" onclick="toggleWord(this)">loading</span>, 
                 <span class="word" onclick="toggleWord(this)">ensuring</span> 
                 all 
@@ -470,7 +637,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>14. Scenario: Safety Check While Loading</h2>
+            <h2>14. Escenario: Verificación de Seguridad al Cargar</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">I</span> 
                 <span class="word" onclick="toggleWord(this)">count</span> 
@@ -479,14 +646,15 @@
                 as 
                 <span class="word" onclick="toggleWord(this)">they</span> 
                 <span class="word" onclick="toggleWord(this)">get</span> 
-                <span class="word" onclick="toggleWord(this)">on</span> 
+                off 
                 to 
                 <span class="word" onclick="toggleWord(this)">make</span> 
                 <span class="word" onclick="toggleWord(this)">sure</span> 
                 <span class="word" onclick="toggleWord(this)">everyone</span> 
-                <span class="word" onclick="toggleWord(this)">is</span> 
-                on 
-                <span class="word" onclick="toggleWord(this)">board</span>.
+                has 
+                <span class="word" onclick="toggleWord(this)">left</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">bus</span>.
             </p>
             <p>Cuento a los estudiantes mientras suben para asegurarme de que todos estén a bordo.</p>
         </div>
@@ -496,7 +664,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>15. Scenario: Turning on Red Lights and Extending Stop Arm</h2>
+            <h2>15. Escenario: Encendiendo Luces Rojas y Extendiendo el Brazo de Pare</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">Once</span> 
                 the 
@@ -527,7 +695,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>16. Scenario: Closing the Door and Checking Mirrors</h2>
+            <h2>16. Escenario: Cerrando la Puerta y Revisando los Espejos</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">I</span> 
                 <span class="word" onclick="toggleWord(this)">close</span> 
@@ -557,7 +725,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>17. Scenario: Approaching the Unloading Zone</h2>
+            <h2>17. Escenario: Acercándose a la Zona de Descarga</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">I</span> 
                 <span class="word" onclick="toggleWord(this)">slowly</span> 
@@ -586,7 +754,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>18. Scenario: Stopping the Bus at Unloading Zone</h2>
+            <h2>18. Escenario: Deteniendo el Bus en la Zona de Descarga</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">I</span> 
                 <span class="word" onclick="toggleWord(this)">stop</span> 
@@ -610,7 +778,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>19. Scenario: Securing the Bus Before Unloading</h2>
+            <h2>19. Escenario: Asegurando el Bus Antes de Descargar</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">I</span> 
                 <span class="word" onclick="toggleWord(this)">place</span> 
@@ -620,7 +788,7 @@
                 in 
                 <span class="word" onclick="toggleWord(this)">neutral</span> 
                 and 
-                set 
+                <span class="word" onclick="toggleWord(this)">set</span> 
                 the 
                 <span class="word" onclick="toggleWord(this)">parking</span> 
                 <span class="word" onclick="toggleWord(this)">brake</span> 
@@ -641,7 +809,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>20. Scenario: Opening the Door for Unloading</h2>
+            <h2>20. Escenario: Abriendo la Puerta para Descargar</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">I</span> 
                 <span class="word" onclick="toggleWord(this)">open</span> 
@@ -673,7 +841,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>21. Scenario: Safety Check While Unloading</h2>
+            <h2>21. Escenario: Verificación de Seguridad al Descargar</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">I</span> 
                 <span class="word" onclick="toggleWord(this)">count</span> 
@@ -700,7 +868,7 @@
     <li>
         <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
         <div>
-            <h2>22. Scenario: Final Check Before Leaving the Unloading Zone</h2>
+            <h2>22. Escenario: Verificación Final Antes de Salir de la Zona de Descarga</h2>
             <p>
                 <span class="word" onclick="toggleWord(this)">I</span> 
                 verify 
@@ -728,14 +896,36 @@
 </ul>
 
 <div id="incorrect-words">
-    <h2>English Words That Weren't Pronounced Correctly</h2>
+    <h2>¿Qué palabras pronuncié incorrectamente?</h2>
     <ul id="word-list">
-        <!-- Words will be added here in alphabetical order -->
+        <!-- Las palabras se agregarán aquí en orden alfabético -->
     </ul>
+</div>
+
+<!-- Mensaje Final del Juego -->
+<div id="final-message">
+    <h2>¡Oh no!</h2>
+    <p id="final-text"></p>
+    <div class="button-group">
+        <button onclick="closeFinalMessage()">Continuar</button>
+        <button onclick="startOver()">Reiniciar</button>
+        <button onclick="scrollToIncorrectWords()">¿Qué palabras pronuncié incorrectamente?</button>
+    </div>
 </div>
 
 <script>
     let incorrectWords = [];
+    const maxErrors = 14;
+    let currentErrors = 0;
+
+    // Lista de mensajes finales
+    const finalMessages = [
+        "¡Este pana se murió escuchando esas palabras inglesas mal pronunciadas!",
+        "¡Este man se ahogó por las malas pronunciaciones de esas palabras en inglés!",
+        "Nuestro amigo cayó por tener que escuchar esas palabras en inglés tan mal pronunciadas.",
+        "¡Este tipo no aguantó las pronunciaciones y se fue al otro mundo!",
+        "¡Este camarada no pudo soportar las pronunciaciones y se fue!"
+    ];
 
     // Toggle the checkbox state between checked, unchecked, and neutral
     function toggleCheck(element) {
@@ -747,10 +937,14 @@
             element.classList.remove('checked');
             element.classList.add('unchecked');
             element.innerHTML = '✖';
+            // Consider 'unchecked' as incorrect
+            incrementError();
         } else {
             element.classList.remove('unchecked');
             element.classList.add('neutral');
             element.innerHTML = '';
+            // Remove error if previously unchecked
+            decrementError();
         }
     }
 
@@ -763,10 +957,12 @@
         if (element.classList.contains('selected')) {
             element.classList.remove('selected');
             removeWord(word);
+            decrementError();
         } else {
             // Add word and highlight it
             element.classList.add('selected');
             addWord(word);
+            incrementError();
         }
 
         // Update the displayed word list
@@ -800,6 +996,119 @@
             wordList.appendChild(listItem);
         });
     }
+
+    // Increment the error count and update the hangman
+    function incrementError() {
+        if (currentErrors < maxErrors) {
+            currentErrors++;
+            updateHangman();
+            if (currentErrors === maxErrors) {
+                showFinalMessage();
+            }
+        }
+    }
+
+    // Decrement the error count and update the hangman
+    function decrementError() {
+        if (currentErrors > 0) {
+            currentErrors--;
+            updateHangman();
+        }
+    }
+
+    // Actualizar el ahorcado según el número de errores
+    function updateHangman() {
+        const hangmanParts = [
+            'base',
+            'post-vertical',
+            'post-horizontal',
+            'rope',
+            'head',
+            'body',
+            'left-arm',
+            'right-arm',
+            'left-leg',
+            'right-leg',
+            'left-eye',
+            'right-eye',
+            'mouth'
+            // Puedes agregar más partes si deseas
+        ];
+
+        // Ocultar todas las partes primero
+        hangmanParts.forEach(function(part) {
+            const element = document.querySelector('.' + part);
+            if (element) {
+                element.style.display = 'none';
+            }
+        });
+
+        // Mostrar las partes según los errores
+        for (let i = 0; i < currentErrors && i < hangmanParts.length; i++) {
+            const part = hangmanParts[i];
+            const element = document.querySelector('.' + part);
+            if (element) {
+                element.style.display = 'block';
+            }
+        }
+    }
+
+    // Mostrar el mensaje final
+    function showFinalMessage() {
+        const finalMessageDiv = document.getElementById('final-message');
+        const finalText = document.getElementById('final-text');
+
+        // Seleccionar aleatoriamente un mensaje final
+        const randomIndex = Math.floor(Math.random() * finalMessages.length);
+        finalText.textContent = finalMessages[randomIndex];
+
+        finalMessageDiv.style.display = 'block';
+    }
+
+    // Cerrar el mensaje final
+    function closeFinalMessage() {
+        const finalMessageDiv = document.getElementById('final-message');
+        finalMessageDiv.style.display = 'none';
+    }
+
+    // Reiniciar el juego
+    function startOver() {
+        // Restablecer el contador de errores
+        currentErrors = 0;
+        updateHangman();
+
+        // Limpiar la lista de palabras incorrectas
+        incorrectWords = [];
+        updateWordList();
+
+        // Restablecer todos los checkboxes
+        const checkboxes = document.querySelectorAll('.checkbox');
+        checkboxes.forEach(function(box) {
+            box.classList.remove('checked', 'unchecked');
+            box.classList.add('neutral');
+            box.innerHTML = '';
+        });
+
+        // Restablecer todas las palabras seleccionadas
+        const words = document.querySelectorAll('.word.selected');
+        words.forEach(function(word) {
+            word.classList.remove('selected');
+        });
+
+        // Cerrar el mensaje final si está abierto
+        closeFinalMessage();
+    }
+
+    // Desplazar hacia la sección de palabras incorrectas
+    function scrollToIncorrectWords() {
+        const incorrectWordsSection = document.getElementById('incorrect-words');
+        incorrectWordsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Inicializar el ahorcado al cargar la página
+    window.onload = function() {
+        updateHangman();
+    };
 </script>
 
 </body>
