@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Driver Scenarios Checklist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            line-height: 1.5;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .checked {
+            background-color: green;
+            color: white;
+        }
+
+        .unchecked {
+            background-color: red;
+            color: white;
+        }
+
+        .neutral {
+            background-color: #fff;
+            color: #ccc;
+        }
+
+        .word {
+            cursor: pointer;
+            color: #007bff;
+            padding: 1px;
+            margin: 1px;
+        }
+
+        .word.selected {
+            background-color: red;
+            color: white;
+        }
+
+        #incorrect-words {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff8dc;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        #word-list {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Bus Driver Scenarios Checklist</h1>
+
+<ul>
+    <!-- Scenario 1 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>1. Scenario: Turning Off Hazard Lights</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">After</span> 
+                <span class="word" onclick="toggleWord(this)">safely</span> 
+                <span class="word" onclick="toggleWord(this)">crossing</span> 
+                <span class="word" onclick="toggleWord(this)">the</span> 
+                <span class="word" onclick="toggleWord(this)">tracks</span>, 
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">turn</span> 
+                <span class="word" onclick="toggleWord(this)">off</span> 
+                <span class="word" onclick="toggleWord(this)">the</span> 
+                <span class="word" onclick="toggleWord(this)">four-way</span> 
+                <span class="word" onclick="toggleWord(this)">hazard</span> 
+                <span class="word" onclick="toggleWord(this)">lights</span>.
+            </p>
+            <p>Después de cruzar las vías de manera segura, apago las luces de advertencia de cuatro direcciones, completando un cruce ferroviario adecuado en un bus escolar.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 2 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>2. Scenario: Approaching the Railroad Crossing</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">When</span> 
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">approach</span> 
+                <span class="word" onclick="toggleWord(this)">the</span> 
+                <span class="word" onclick="toggleWord(this)">railroad</span> 
+                <span class="word" onclick="toggleWord(this)">crossing</span>, 
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">slow</span> 
+                <span class="word" onclick="toggleWord(this)">down</span> 
+                <span class="word" onclick="toggleWord(this)">and</span> 
+                <span class="word" onclick="toggleWord(this)">activate</span> 
+                <span class="word" onclick="toggleWord(this)">the</span> 
+                <span class="word" onclick="toggleWord(this)">four-way</span> 
+                <span class="word" onclick="toggleWord(this)">hazard</span> 
+                <span class="word" onclick="toggleWord(this)">lights</span>.
+            </p>
+            <p>Cuando me acerco al cruce de las vías del tren, reduzco la velocidad, y activo las luces de advertencia de cuatro direcciones.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 3 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>3. Scenario: Scanning for Traffic Behind the Bus</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">As</span> 
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">approach</span> 
+                <span class="word" onclick="toggleWord(this)">the</span> 
+                <span class="word" onclick="toggleWord(this)">tracks</span>, 
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">scan</span> 
+                <span class="word" onclick="toggleWord(this)">my</span> 
+                <span class="word" onclick="toggleWord(this)">surroundings</span> 
+                <span class="word" onclick="toggleWord(this)">and</span> 
+                <span class="word" onclick="toggleWord(this)">check</span> 
+                <span class="word" onclick="toggleWord(this)">my</span> 
+                <span class="word" onclick="toggleWord(this)">mirrors</span> 
+                <span class="word" onclick="toggleWord(this)">for</span> 
+                <span class="word" onclick="toggleWord(this)">any</span> 
+                <span class="word" onclick="toggleWord(this)">traffic</span> 
+                <span class="word" onclick="toggleWord(this)">behind</span> 
+                <span class="word" onclick="toggleWord(this)">the</span> 
+                <span class="word" onclick="toggleWord(this)">bus</span>.
+            </p>
+            <p>A medida que me acerco a las vías, escaneo mi entorno y reviso mis espejos para detectar cualquier tráfico detrás del bus.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 4 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>4. Scenario: Stopping at the Railroad Crossing</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">When</span> 
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">reach</span> 
+                <span class="word" onclick="toggleWord(this)">the</span> 
+                <span class="word" onclick="toggleWord(this)">crossing</span>, 
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">stop</span> 
+                <span class="word" onclick="toggleWord(this)">the</span> 
+                <span class="word" onclick="toggleWord(this)">bus</span> 
+                <span class="word" onclick="toggleWord(this)">no</span> 
+                <span class="word" onclick="toggleWord(this)">closer</span> 
+                <span class="word" onclick="toggleWord(this)">than</span> 
+                <span class="word" onclick="toggleWord(this)">15</span> 
+                <span class="word" onclick="toggleWord(this)">feet</span> 
+                <span class="word" onclick="toggleWord(this)">and</span> 
+                <span class="word" onclick="toggleWord(this)">no</span> 
+                <span class="word" onclick="toggleWord(this)">further</span> 
+                <span class="word" onclick="toggleWord(this)">than</span> 
+                <span class="word" onclick="toggleWord(this)">50</span> 
+                <span class="word" onclick="toggleWord(this)">feet</span> 
+                <span class="word" onclick="toggleWord(this)">from</span> 
+                <span class="word" onclick="toggleWord(this)">the</span> 
+                <span class="word" onclick="toggleWord(this)">tracks</span>.
+            </p>
+            <p>Al llegar al cruce, detengo el bus no más cerca de 15 pies y no más lejos de 50 pies de las vías del tren.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 5 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>5. Scenario: Turning Off Equipment and Listening for a Train</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">At</span> 
+                <span class="word" onclick="toggleWord(this)">the</span> 
+                <span class="word" onclick="toggleWord(this)">crossing</span>, 
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">turn</span> 
+                <span class="word" onclick="toggleWord(this)">off</span> 
+                <span class="word" onclick="toggleWord(this)">the</span> 
+                <span class="word" onclick="toggleWord(this)">radio</span>, 
+                <span class="word" onclick="toggleWord(this)">noisy</span> 
+                <span class="word" onclick="toggleWord(this)">equipment</span>, 
+                <span class="word" onclick="toggleWord(this)">and</span> 
+                <span class="word" onclick="toggleWord(this)">quiet</span> 
+                <span class="word" onclick="toggleWord(this)">the</span> 
+                <span class="word" onclick="toggleWord(this)">bus</span> 
+                <span class="word" onclick="toggleWord(this)">to</span> 
+                <span class="word" onclick="toggleWord(this)">listen</span> 
+                <span class="word" onclick="toggleWord(this)">for</span> 
+                <span class="word" onclick="toggleWord(this)">an</span> 
+                <span class="word" onclick="toggleWord(this)">approaching</span> 
+                <span class="word" onclick="toggleWord(this)">train</span>.
+            </p>
+            <p>En el cruce, apago la radio, el equipo ruidoso y silencio el bus para escuchar si se aproxima un tren.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 6 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>6. Scenario: Opening the Service Door and Driver’s Window</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">open</span> 
+                <span class="word" onclick="toggleWord(this)">the</span> 
+                <span class="word" onclick="toggleWord(this)">service</span> 
+                <span class="word" onclick="toggleWord(this)">door</span> 
+                <span class="word" onclick="toggleWord(this)">and</span> 
+                <span class="word" onclick="toggleWord(this)">the</span> 
+                <span class="word" onclick="toggleWord(this)">driver’s</span> 
+                <span class="word" onclick="toggleWord(this)">window</span> 
+                to 
+                <span class="word" onclick="toggleWord(this)">look</span> 
+                and 
+                <span class="word" onclick="toggleWord(this)">listen</span> 
+                for 
+                <span class="word" onclick="toggleWord(this)">an</span> 
+                <span class="word" onclick="toggleWord(this)">approaching</span> 
+                <span class="word" onclick="toggleWord(this)">train</span>.
+            </p>
+            <p>Abro la puerta de servicio y la ventana del conductor y me tomo el tiempo para mirar y escuchar si se aproxima un tren.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 7 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>7. Scenario: Safely Checking the Track and Proceeding</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">After</span> 
+                <span class="word" onclick="toggleWord(this)">safely</span> 
+                <span class="word" onclick="toggleWord(this)">checking</span> 
+                <span class="word" onclick="toggleWord(this)">the</span> 
+                <span class="word" onclick="toggleWord(this)">track</span> 
+                and 
+                <span class="word" onclick="toggleWord(this)">judging</span> 
+                that 
+                <span class="word" onclick="toggleWord(this)">it</span> 
+                <span class="word" onclick="toggleWord(this)">is</span> 
+                <span class="word" onclick="toggleWord(this)">safe</span> 
+                <span class="word" onclick="toggleWord(this)">to</span> 
+                <span class="word" onclick="toggleWord(this)">proceed</span>, 
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">close</span> 
+                <span class="word" onclick="toggleWord(this)">the</span> 
+                <span class="word" onclick="toggleWord(this)">service</span> 
+                <span class="word" onclick="toggleWord(this)">door</span> 
+                and 
+                <span class="word" onclick="toggleWord(this)">check</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">tracks</span> 
+                once 
+                <span class="word" onclick="toggleWord(this)">more</span> 
+                before 
+                <span class="word" onclick="toggleWord(this)">crossing</span>.
+            </p>
+            <p>Después de verificar de manera segura la vía y juzgar que es seguro proceder, cierro la puerta de servicio y reviso las vías una vez más antes de cruzar.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 8 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>8. Scenario: Crossing the Tracks</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">cross</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">tracks</span> 
+                and 
+                <span class="word" onclick="toggleWord(this)">do</span> 
+                not 
+                <span class="word" onclick="toggleWord(this)">stop</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">bus</span> 
+                until 
+                <span class="word" onclick="toggleWord(this)">completely</span> 
+                <span class="word" onclick="toggleWord(this)">across</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">tracks</span>.
+            </p>
+            <p>Cruzo las vías, y no detengo el bus hasta que haya cruzado completamente las vías.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 9 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>9. Scenario: Approaching the Loading Zone</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">slowly</span> 
+                <span class="word" onclick="toggleWord(this)">and</span> 
+                <span class="word" onclick="toggleWord(this)">carefully</span> 
+                <span class="word" onclick="toggleWord(this)">approach</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">loading</span> 
+                <span class="word" onclick="toggleWord(this)">zone</span>. 
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">instruct</span> 
+                <span class="word" onclick="toggleWord(this)">students</span> 
+                to 
+                <span class="word" onclick="toggleWord(this)">wait</span> 
+                <span class="word" onclick="toggleWord(this)">in</span> 
+                an 
+                <span class="word" onclick="toggleWord(this)">orderly</span> 
+                <span class="word" onclick="toggleWord(this)">and</span> 
+                <span class="word" onclick="toggleWord(this)">safe</span> 
+                <span class="word" onclick="toggleWord(this)">manner</span> 
+                <span class="word" onclick="toggleWord(this)">away</span> 
+                <span class="word" onclick="toggleWord(this)">from</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">road</span>.
+            </p>
+            <p>Me acerco lentamente y con cuidado a la zona de carga. Indico a los estudiantes que esperen de manera ordenada y segura alejados de la carretera.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 10 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>10. Scenario: Turning on the Amber Lights</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">Approximately</span> 
+                <span class="word" onclick="toggleWord(this)">200</span> 
+                <span class="word" onclick="toggleWord(this)">feet</span> 
+                <span class="word" onclick="toggleWord(this)">before</span> 
+                <span class="word" onclick="toggleWord(this)">reaching</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">stop</span>, 
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">turn</span> 
+                on 
+                the 
+                <span class="word" onclick="toggleWord(this)">amber</span> 
+                <span class="word" onclick="toggleWord(this)">flashing</span> 
+                <span class="word" onclick="toggleWord(this)">lights</span>.
+            </p>
+            <p>Aproximadamente 200 pies antes de llegar a la parada, enciendo las luces ámbar intermitentes para alertar a otros conductores de que me estoy acercando a una parada.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 11 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>11. Scenario: Stopping the Bus at Loading Zone</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">stop</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">bus</span> 
+                <span class="word" onclick="toggleWord(this)">12</span> 
+                <span class="word" onclick="toggleWord(this)">feet</span> 
+                <span class="word" onclick="toggleWord(this)">from</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">students</span>.
+            </p>
+            <p>Detengo el bus a 12 pies de los estudiantes antes de cargar.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 12 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>12. Scenario: Securing the Bus Before Loading</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">place</span> 
+                <span class="word" onclick="toggleWord(this)">the</span> 
+                <span class="word" onclick="toggleWord(this)">transmission</span> 
+                in 
+                <span class="word" onclick="toggleWord(this)">neutral</span> 
+                <span class="word" onclick="toggleWord(this)">and</span> 
+                set 
+                the 
+                <span class="word" onclick="toggleWord(this)">parking</span> 
+                <span class="word" onclick="toggleWord(this)">brake</span> 
+                before 
+                <span class="word" onclick="toggleWord(this)">opening</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">door</span> 
+                to 
+                <span class="word" onclick="toggleWord(this)">load</span>.
+            </p>
+            <p>Coloco la transmisión del vehículo en neutral y pongo el freno de estacionamiento antes de abrir la puerta para cargar.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 13 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>13. Scenario: Opening the Door for Loading</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">open</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">door</span> 
+                <span class="word" onclick="toggleWord(this)">for</span> 
+                <span class="word" onclick="toggleWord(this)">loading</span>, 
+                <span class="word" onclick="toggleWord(this)">ensuring</span> 
+                all 
+                <span class="word" onclick="toggleWord(this)">students</span> 
+                <span class="word" onclick="toggleWord(this)">board</span> 
+                <span class="word" onclick="toggleWord(this)">safely</span>.
+            </p>
+            <p>Abro la puerta del bus para cargar, asegurando que todos los estudiantes suban de manera segura.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 14 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>14. Scenario: Safety Check While Loading</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">count</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">students</span> 
+                as 
+                <span class="word" onclick="toggleWord(this)">they</span> 
+                <span class="word" onclick="toggleWord(this)">get</span> 
+                <span class="word" onclick="toggleWord(this)">on</span> 
+                to 
+                <span class="word" onclick="toggleWord(this)">make</span> 
+                <span class="word" onclick="toggleWord(this)">sure</span> 
+                <span class="word" onclick="toggleWord(this)">everyone</span> 
+                <span class="word" onclick="toggleWord(this)">is</span> 
+                on 
+                <span class="word" onclick="toggleWord(this)">board</span>.
+            </p>
+            <p>Cuento a los estudiantes mientras suben para asegurarme de que todos estén a bordo.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 15 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>15. Scenario: Turning on Red Lights and Extending Stop Arm</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">Once</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">bus</span> 
+                is 
+                <span class="word" onclick="toggleWord(this)">stopped</span>, 
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">turn</span> 
+                on 
+                the 
+                <span class="word" onclick="toggleWord(this)">red</span> 
+                <span class="word" onclick="toggleWord(this)">flashing</span> 
+                <span class="word" onclick="toggleWord(this)">lights</span> 
+                and 
+                <span class="word" onclick="toggleWord(this)">extend</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">stop</span> 
+                <span class="word" onclick="toggleWord(this)">arm</span> 
+                to 
+                <span class="word" onclick="toggleWord(this)">stop</span> 
+                <span class="word" onclick="toggleWord(this)">traffic</span>.
+            </p>
+            <p>Una vez que el bus esté detenido, enciendo las luces rojas intermitentes y extiendo el brazo de pare para detener el tráfico.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 16 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>16. Scenario: Closing the Door and Checking Mirrors</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">close</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">bus</span> 
+                door 
+                <span class="word" onclick="toggleWord(this)">and</span> 
+                <span class="word" onclick="toggleWord(this)">check</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">mirrors</span> 
+                to 
+                <span class="word" onclick="toggleWord(this)">ensure</span> 
+                no 
+                <span class="word" onclick="toggleWord(this)">students</span> 
+                are 
+                <span class="word" onclick="toggleWord(this)">near</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">bus</span> 
+                before 
+                <span class="word" onclick="toggleWord(this)">departing</span>.
+            </p>
+            <p>Cierro la puerta del bus y reviso los espejos para asegurarme de que no haya estudiantes cerca del bus antes de partir.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 17 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>17. Scenario: Approaching the Unloading Zone</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">slowly</span> 
+                and 
+                <span class="word" onclick="toggleWord(this)">carefully</span> 
+                <span class="word" onclick="toggleWord(this)">approach</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">unloading</span> 
+                <span class="word" onclick="toggleWord(this)">zone</span>, 
+                activating 
+                the 
+                <span class="word" onclick="toggleWord(this)">amber</span> 
+                <span class="word" onclick="toggleWord(this)">flashing</span> 
+                <span class="word" onclick="toggleWord(this)">lights</span> 
+                <span class="word" onclick="toggleWord(this)">200</span> 
+                feet 
+                before 
+                <span class="word" onclick="toggleWord(this)">reaching</span> 
+                it.
+            </p>
+            <p>Me acerco lentamente y con cuidado a la zona de descarga, activando las luces ámbar intermitentes aproximadamente 200 pies antes de llegar.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 18 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>18. Scenario: Stopping the Bus at Unloading Zone</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">stop</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">bus</span> 
+                <span class="word" onclick="toggleWord(this)">12</span> 
+                feet 
+                from 
+                the 
+                <span class="word" onclick="toggleWord(this)">students</span> 
+                before 
+                <span class="word" onclick="toggleWord(this)">letting</span> 
+                them 
+                <span class="word" onclick="toggleWord(this)">off</span>.
+            </p>
+            <p>Detengo el bus a 12 pies de los estudiantes antes de descargar.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 19 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>19. Scenario: Securing the Bus Before Unloading</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">place</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">vehicle’s</span> 
+                <span class="word" onclick="toggleWord(this)">transmission</span> 
+                in 
+                <span class="word" onclick="toggleWord(this)">neutral</span> 
+                and 
+                set 
+                the 
+                <span class="word" onclick="toggleWord(this)">parking</span> 
+                <span class="word" onclick="toggleWord(this)">brake</span> 
+                before 
+                <span class="word" onclick="toggleWord(this)">opening</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">door</span> 
+                to 
+                <span class="word" onclick="toggleWord(this)">let</span> 
+                <span class="word" onclick="toggleWord(this)">students</span> 
+                <span class="word" onclick="toggleWord(this)">off</span>.
+            </p>
+            <p>Coloco la transmisión del vehículo en neutral y pongo el freno de estacionamiento antes de abrir la puerta para descargar.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 20 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>20. Scenario: Opening the Door for Unloading</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">open</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">bus</span> 
+                door 
+                <span class="word" onclick="toggleWord(this)">and</span> 
+                <span class="word" onclick="toggleWord(this)">allow</span> 
+                <span class="word" onclick="toggleWord(this)">students</span> 
+                to 
+                <span class="word" onclick="toggleWord(this)">get</span> 
+                off 
+                in 
+                an 
+                <span class="word" onclick="toggleWord(this)">orderly</span> 
+                manner, 
+                <span class="word" onclick="toggleWord(this)">using</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">handrail</span> 
+                to 
+                <span class="word" onclick="toggleWord(this)">avoid</span> 
+                falls.
+            </p>
+            <p>Abro la puerta del bus y permito que los estudiantes bajen de manera ordenada utilizando el pasamanos para evitar caídas.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 21 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>21. Scenario: Safety Check While Unloading</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                <span class="word" onclick="toggleWord(this)">count</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">students</span> 
+                as 
+                <span class="word" onclick="toggleWord(this)">they</span> 
+                <span class="word" onclick="toggleWord(this)">get</span> 
+                off 
+                to 
+                <span class="word" onclick="toggleWord(this)">make</span> 
+                sure 
+                <span class="word" onclick="toggleWord(this)">everyone</span> 
+                has 
+                <span class="word" onclick="toggleWord(this)">left</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">bus</span>.
+            </p>
+            <p>Cuento a los estudiantes mientras bajan para asegurarme de que todos hayan salido del bus.</p>
+        </div>
+    </li>
+
+    <!-- Scenario 22 -->
+    <li>
+        <div class="checkbox neutral" onclick="toggleCheck(this)"></div>
+        <div>
+            <h2>22. Scenario: Final Check Before Leaving the Unloading Zone</h2>
+            <p>
+                <span class="word" onclick="toggleWord(this)">I</span> 
+                verify 
+                that 
+                no 
+                <span class="word" onclick="toggleWord(this)">students</span> 
+                are 
+                in 
+                the 
+                <span class="word" onclick="toggleWord(this)">danger</span> 
+                <span class="word" onclick="toggleWord(this)">zone</span> 
+                (<span class="word" onclick="toggleWord(this)">10</span> 
+                <span class="word" onclick="toggleWord(this)">feet</span> 
+                around 
+                the 
+                <span class="word" onclick="toggleWord(this)">bus</span>) 
+                before 
+                <span class="word" onclick="toggleWord(this)">moving</span> 
+                the 
+                <span class="word" onclick="toggleWord(this)">bus</span>.
+            </p>
+            <p>Verifico que no haya estudiantes en la zona de peligro (10 pies alrededor del bus) antes de continuar.</p>
+        </div>
+    </li>
+</ul>
+
+<div id="incorrect-words">
+    <h2>English Words That Weren't Pronounced Correctly</h2>
+    <ul id="word-list">
+        <!-- Words will be added here in alphabetical order -->
+    </ul>
+</div>
+
+<script>
+    let incorrectWords = [];
+
+    // Toggle the checkbox state between checked, unchecked, and neutral
+    function toggleCheck(element) {
+        if (element.classList.contains('neutral')) {
+            element.classList.remove('neutral');
+            element.classList.add('checked');
+            element.innerHTML = '✔';
+        } else if (element.classList.contains('checked')) {
+            element.classList.remove('checked');
+            element.classList.add('unchecked');
+            element.innerHTML = '✖';
+        } else {
+            element.classList.remove('unchecked');
+            element.classList.add('neutral');
+            element.innerHTML = '';
+        }
+    }
+
+    // Toggle word highlighting and add/remove from word list
+    function toggleWord(element) {
+        const word = element.textContent;
+        const wordList = document.getElementById('word-list');
+
+        // If word is already selected, remove it
+        if (element.classList.contains('selected')) {
+            element.classList.remove('selected');
+            removeWord(word);
+        } else {
+            // Add word and highlight it
+            element.classList.add('selected');
+            addWord(word);
+        }
+
+        // Update the displayed word list
+        updateWordList();
+    }
+
+    // Add the word to the incorrectWords array and keep it sorted alphabetically
+    function addWord(word) {
+        // Only add if the word isn't already in the array
+        if (!incorrectWords.includes(word)) {
+            incorrectWords.push(word);
+            incorrectWords.sort();
+        }
+    }
+
+    // Remove the word from the incorrectWords array
+    function removeWord(word) {
+        incorrectWords = incorrectWords.filter(function(item) {
+            return item !== word;
+        });
+    }
+
+    // Update the displayed word list
+    function updateWordList() {
+        const wordList = document.getElementById('word-list');
+        wordList.innerHTML = '';
+
+        incorrectWords.forEach(function(word) {
+            const listItem = document.createElement('li');
+            listItem.textContent = word;
+            wordList.appendChild(listItem);
+        });
+    }
+</script>
+
+</body>
+</html>
